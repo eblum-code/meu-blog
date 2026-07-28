@@ -87,3 +87,130 @@
 
 
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de FPS | Erick Blum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #0f172a; /* Azul escuro */
+            color: #ff6600; /* Laranja */
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 3px solid #ff6600;
+        }
+
+        main {
+            background-color: #1e293b; /* Azul escuro secundário */
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        article {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding: 16px;
+            background-color: #0f172a;
+            border-radius: 6px;
+            border-left: 4px solid #ff6600;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            color: #ff6600;
+            margin: 4px 0 12px 0;
+        }
+
+        button {
+            background-color: #1e293b;
+            color: #ffffff;
+            border: 1px solid #ff6600;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #ff6600;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FPS Central</h1>
+        <p>Vou compartilhar sobre estratégias, novidades e os melhores jogos de tiro em primeira pessoa!</p>
+    </header>
+    <main>
+        <article>
+            <img src="imagem-blog.png"
+                alt="Ícone estilo FPS com miras ou elementos de jogos de tiro.">
+            <div>
+                <h2>Boas-vindas ao meu blog de FPS!</h2>
+                <p class="artigo-autor">Por: Erick Ruan de Oliveira Blum</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de mira, análises de jogos como Valorant, CS e Call of Duty, além de novidades do mundo competitivo.</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="imagem-blog.png"
+                alt="Ícone estilo FPS com miras ou elementos de jogos de tiro.">
+            <div>
+                <h2>3 Dicas essenciais para melhorar sua mira</h2>
+                <p class="artigo-autor">Por: Erick Ruan de Oliveira Blum</p>
+                <p>No meu segundo post, separei 3 dicas para você subir de elo: treino diário no Aim Lab, posicionamento da mira na altura da cabeça (crosshair placement) e comunicação limpa com o time!</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    })
+</script>
+
+</html>
